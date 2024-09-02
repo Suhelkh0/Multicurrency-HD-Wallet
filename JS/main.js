@@ -12,7 +12,7 @@ if (createAccountForm) {
 
 
 //create a new account to use the wallet
-function createAccount() { 
+function createAccount() {        
     var username = document.getElementById('username').value;
     var password = document.getElementById('password').value;
     var seedPhrase = lightwallet.keystore.generateRandomSeed();
@@ -44,28 +44,71 @@ function createAccount() {
             var allUsers = JSON.parse(localStorage.getItem('userData')) || [];
 
             // Check if the username already exists
-    var existingUser = allUsers.find(user => user.username === username);
-    if (existingUser) {
-        document.getElementById('accountAddress').innerText = 'A user with this username already exists. Please choose a different username.';
-        return;
-    }
+            var existingUser = allUsers.find(user => user.username === username);
+            if (existingUser) {
+                document.getElementById('accountAddress').innerText = 'A user with this username already exists. Please choose a different username.';
+                return;
+            }
 
 
             //if there's user logged in do not let creating acc
             var loggedInUser = allUsers.find(user => user.isLoggedIn);
-            if (loggedInUser) {
+            /*if (loggedInUser) {
                 document.getElementById('accountAddress').innerText = 'You are already logged in. Logout before creating a new account.';
                 return;
-            }
+            }*/
 
            //Saves the new added user in localStorage
             allUsers.push(userData);
             localStorage.setItem('userData', JSON.stringify(allUsers));
 
-            document.getElementById('accountAddress').innerText = 'Username: ' + username + ', Account Address: ' + addr;
-            document.getElementById('seedPhraseDisplay').innerText = seedPhrase; // Display the seed phrase
+             // Show seed phrase in a popup
+             showSeedPhrasePopup(seedPhrase);
+
+            //document.getElementById('accountAddress').innerText = 'Username: ' + username + ', Account Address: ' + addr;
+            //document.getElementById('seedPhraseDisplay').innerText = seedPhrase; // Display the seed phrase
         });
     });
+}
+
+// Display the seed phrase in a popup with a critical reminder message
+function showSeedPhrasePopup(seedPhrase) {
+    // Create the popup element
+    var popup = document.createElement('div');
+    popup.classList.add('seed-popup');
+
+    // Create the content container
+    var popupContent = document.createElement('div');
+    popupContent.classList.add('seed-popup-content');
+
+    // Add the seed phrase text
+    var seedText = document.createElement('p');
+    seedText.innerText = `Your Seed Phrase:\n\n${seedPhrase}`;
+    seedText.style.whiteSpace = 'pre-wrap'; // Ensure the text is formatted correctly
+
+    // Add the critical reminder message in red
+    var reminderText = document.createElement('p');
+    reminderText.innerText = 'IMPORTANT: Save this seed phrase in a secure place. If you lose it, you cannot restore your seed or your account!';
+    reminderText.style.color = 'red'; // Make the warning message red
+    reminderText.style.fontWeight = 'bold'; // Make the warning message bold
+    reminderText.style.marginTop = '10px'; // Add some spacing for better readability
+
+    // Add a close button that proceeds to login
+    var closeButton = document.createElement('button');
+    closeButton.innerText = 'Proceed to Login';
+    closeButton.onclick = function () {
+        document.body.removeChild(popup);
+        window.location.href = 'index.html'; // Redirect to login page
+    };
+
+    // Append all elements to the popup content and then to the popup itself
+    popupContent.appendChild(seedText);
+    popupContent.appendChild(reminderText);
+    popupContent.appendChild(closeButton);
+    popup.appendChild(popupContent);
+
+    // Append the popup to the body
+    document.body.appendChild(popup);
 }
 
 
@@ -102,7 +145,6 @@ function login() {
             }, 2000);
             user.isLoggedIn = true;
             localStorage.setItem('userData', JSON.stringify(allUsers));
-       
     
 }
 
@@ -428,7 +470,3 @@ function restoreAccount(seedPhraseInput) {
         document.getElementById('errorMsg').innerText = 'No user found with the given seed phrase.';
     }
 }
-
-
-
-

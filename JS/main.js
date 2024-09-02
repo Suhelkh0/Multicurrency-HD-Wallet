@@ -12,7 +12,8 @@ if (createAccountForm) {
 
 
 //create a new account to use the wallet
-function createAccount() {              
+function createAccount() { 
+    console.log('hhhhhhhhh');
     var username = document.getElementById('username').value;
     var password = document.getElementById('password').value;
     var seedPhrase = lightwallet.keystore.generateRandomSeed();

@@ -134,7 +134,7 @@ function logOut() { // logout
     // Update the localStorage
     localStorage.setItem('userData', JSON.stringify(allUsers));
 
-    window.location.href = 'LogInPage.html';  // redirect to LogInPage page
+    window.location.href = 'index.html';  // redirect to LogInPage page
 }
 
 async function getUserBalance() {  // display the user balance on the home(index2) page for ETH 

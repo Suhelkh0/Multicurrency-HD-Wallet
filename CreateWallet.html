@@ -173,7 +173,7 @@
         }
 
         #existingAccountSection, #startUsingButton {
-            display: none; /* Hidden by default */
+            display: block; /* Hidden by default */
         }
 
         @media screen and (max-width: 768px) {
@@ -205,7 +205,7 @@
 <body onload="checkLoginStatus();">
     <nav>
         <ul>
-            <li><a href="index.html" id="signInLink"><i class="fas fa-sign-in-alt"></i>Sign In</a></li>
+            <li><a href="RestoreAccount.html"><i class="fas fa-undo"></i>Restore Account</a></li>
         </ul>
     </nav>
 
@@ -222,7 +222,7 @@
         <div class="button-group">
             <div id="existingAccountSection">
                 <p>Do you already have an account?</p>
-                <button onclick="goToLogin()"><i class="fas fa-sign-in-alt"></i> Login</button>
+                <button onclick="window.location.href='index.html'"><i class="fas fa-sign-in-alt"></i> Login</button>
             </div>
         </div>
         <div id="accountAddress"></div>

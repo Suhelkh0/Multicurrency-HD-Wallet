@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallet App - Restore Account</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f9fafb;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            min-height: 100vh;
+            color: #333;
+        }
+
+        nav {
+            width: 250px;
+            background-color: #2c3e50;
+            padding: 30px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            position: fixed;
+            height: 100vh;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+
+        nav li {
+            width: 100%;
+            margin: 20px 0;
+        }
+
+        nav a, nav button {
+            color: #ecf0f1;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.2em;
+            padding: 15px 30px;
+            width: 100%;
+            display: block;
+            text-align: left;
+            border-radius: 10px;
+            transition: background-color 0.3s ease-in-out, color 0.3s;
+        }
+
+        nav a i, nav button i {
+            margin-right: 10px;
+            font-size: 1.2em;
+            color: #3498db; /* Blue color for icons */
+        }
+
+        nav a:hover, nav button:hover {
+            background-color: #34495e;
+            color: #ecf0f1;
+        }
+
+        main {
+            margin-left: 250px;
+            padding: 40px;
+            width: calc(100% - 250px);
+            background-color: #ecf0f1;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 20px;
+            transition: box-shadow 0.3s ease-in-out;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #2c3e50;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        input, textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        label {
+            font-weight: bold;
+            font-size: 1em;
+            color: #2c3e50;
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+
+        label i {
+            margin-right: 10px;
+            color: #3498db; /* Blue color for icons */
+        }
+
+        button {
+            padding: 10px;
+            color: white;
+            background-color: #2c3e50; /* Dark blue to match the navigation bar */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: bold;
+            transition: background-color 0.3s ease-in-out;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .fa-paper-plane, .fa-wallet, .fa-coins, .fa-history, .fa-undo, .fa-home{
+            color: #3498db;
+        }
+
+        button i {
+            color: #3498db; /* Blue color for icons */
+        }
+
+        button:hover {
+            background-color: #34495e; /* Slightly lighter blue on hover */
+        }
+
+        #errorMsg {
+            margin-top: 20px;
+            font-weight: bold;
+            color: red;
+            text-align: center;
+        }
+
+        .form-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        @media screen and (max-width: 768px) {
+            nav {
+                width: 100%;
+                height: auto;
+                position: relative;
+                padding: 15px 0;
+            }
+
+            nav ul {
+                flex-direction: row;
+                justify-content: space-around;
+            }
+
+            main {
+                margin-left: 0;
+                width: 100%;
+                margin-top: 80px;
+            }
+
+            form {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="LogInPage.html" id="signInLink"><i class="fas fa-sign-in-alt"></i>Sign In</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1><i class="fas fa-undo"></i> Restore Account</h1>
+        <form id="restoreAccountForm" onsubmit="event.preventDefault(); restoreAccountHTML();">
+            <div class="form-group">
+                <label for="seedPhrase"><i class="fas fa-key"></i> Seed Phrase</label>
+                <textarea id="seedPhrase" name="seedPhrase" placeholder="Enter your 12-word seed phrase here (make sure to have single space between each word)" rows="3" required></textarea>
+            </div>
+
+            <div class="password-group">
+                <label for="newPassword"><i class="fas fa-lock"></i> New Password</label>
+                <input type="password" id="newPassword" name="newPassword" required>
+            </div>
+            <div id="errorMsg"></div>
+            <button type="submit"><i class="fas fa-redo"></i> Restore Account</button>
+        </form>
+    </main>
+
+    <script src="../JS/lightwallet.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.5.2/dist/web3.min.js"></script>
+    <script src="../JS/main.js"></script>
+    <script>
+        function restoreAccountHTML() {
+            // Get seed phrase from textarea
+            let seedPhrase = document.getElementById('seedPhrase').value.trim();
+    
+            var message = restoreAccount(seedPhrase);
+    
+            // Display the returned message
+            document.getElementById('errorMsg').innerText = message;
+        }
+    </script>
+    
+</body>
+
+</html>

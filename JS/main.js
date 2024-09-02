@@ -429,9 +429,9 @@ function restoreAccount(seedPhraseInput) {
 
     // Check if there is a user currently logged in
     var loggedInUser = allUsers.find(user => user.isLoggedIn);
-    if (loggedInUser) {
+    /*if (loggedInUser) {
         return 'A user is already logged in. Please log out before restoring another account.';
-    }
+    }*/
 
     // Find the user whose seed phrase matches the input seed phrase
     var user = allUsers.find(user => user.seedPhrase === seedPhraseInput.trim());

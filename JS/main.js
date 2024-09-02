@@ -462,6 +462,7 @@ function restoreAccount(seedPhraseInput) {
 
                 // Save the updated user data back to localStorage
                 localStorage.setItem('userData', JSON.stringify(allUsers));
+                document.getElementById('errorMsg').style.color = 'green';
 
                 document.getElementById('errorMsg').innerText = 'Account restored successfully! Please log in to access your account.';
             });

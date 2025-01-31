@@ -8,7 +8,7 @@
 
 📖 **Full Wallet Guide**: [guideForWallet.docx](https://suhelkh0.github.io/Multicurrency-HD-Wallet/guideForWallet.docx)
 
---
+---
 
 ## 🛠️ Features
 - 🔐 **Secure Wallet**: Create a new wallet with a username & password
@@ -17,7 +17,7 @@
 - 🔄 **Fund Transfers**: Send Ethereum/Polygon to other wallets
 - 📜 **Transaction History**: Track previous transactions and view details
 
---
+---
 
 ## 📜 How It Works
 1️⃣ **Create a Wallet**

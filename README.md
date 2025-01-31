@@ -6,6 +6,8 @@
 🔗 **Live Demo**: [HD-Wallet](https://suhelkh0.github.io/Multicurrency-HD-Wallet/
 )  
 
+📖 **Full Wallet Guide**: [guideForWallet.docx](docs/guideForWallet.docx)
+
 ## 🛠️ Features
 - 🔐 **Secure Wallet**: Create a new wallet with a username & password
 - 💾 **Seed Phrase Recovery**: Restore your wallet using a 12-word seed phrase

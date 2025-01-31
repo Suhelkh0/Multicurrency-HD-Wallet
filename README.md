@@ -8,12 +8,16 @@
 
 📖 **Full Wallet Guide**: [guideForWallet.docx](https://suhelkh0.github.io/Multicurrency-HD-Wallet/guideForWallet.docx)
 
+--
+
 ## 🛠️ Features
 - 🔐 **Secure Wallet**: Create a new wallet with a username & password
 - 💾 **Seed Phrase Recovery**: Restore your wallet using a 12-word seed phrase
 - 💰 **Balance Overview**: View real-time Ethereum & Polygon balances using Infura API
 - 🔄 **Fund Transfers**: Send Ethereum/Polygon to other wallets
 - 📜 **Transaction History**: Track previous transactions and view details
+
+--
 
 ## 📜 How It Works
 1️⃣ **Create a Wallet**

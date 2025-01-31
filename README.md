@@ -20,7 +20,8 @@
 - Enter a username and password
 - View and save your 12-word seed phrase
 - Proceed to login
-- ![alt text](https://suhelkh0.github.io/Multicurrency-HD-Wallet/Readme_Images/SignUp.png
+
+![alt text](https://suhelkh0.github.io/Multicurrency-HD-Wallet/Readme_Images/SignUp.png
 )
   
 

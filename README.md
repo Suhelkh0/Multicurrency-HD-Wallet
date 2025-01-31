@@ -5,7 +5,6 @@
 
 🔗 **Live Demo**: [HD-Wallet](https://suhelkh0.github.io/Multicurrency-HD-Wallet/
 )  
-📂 **Repository**: [GitHub Repo](https://github.com/Suhelkh0/HD-Wallet)
 
 ## 🛠️ Features
 - 🔐 **Secure Wallet**: Create a new wallet with a username & password

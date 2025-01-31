@@ -20,7 +20,7 @@
 ![Wallet Balance](docs/balance.png)
 ![Transfer Funds](docs/transfer.png)
 
-📜 How It Works
+## 📜 How It Works
 1️⃣ Create a Wallet
 Enter a username and password
 View and save your 12-word seed phrase

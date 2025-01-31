@@ -28,6 +28,7 @@
 2️⃣ **Wallet Overview**
 - See Ethereum/Polygon balances
 - View wallet address
+
 ![alt text](https://suhelkh0.github.io/Multicurrency-HD-Wallet/Readme_Images/Wallet_Overview.png
 )
 
@@ -35,11 +36,13 @@
 - Enter recipient address, coin type, and amount
 - Click "Send Coins"
 - Track transaction using the hash link
+
 ![alt text](https://suhelkh0.github.io/Multicurrency-HD-Wallet/Readme_Images/Transfer_Funds.png
 )
 
 4️⃣ **Transaction History**
 - View transactions under the history tab
+
 ![alt text](https://suhelkh0.github.io/Multicurrency-HD-Wallet/Readme_Images/Transaction_History.png
 )
 - Click on a transaction to see details on Sepolia testnet
@@ -47,5 +50,6 @@
 5️⃣ **Restore an Account**
 - Enter the 12-word seed phrase
 - Wallet password is reset automatically
+
 ![alt text](https://suhelkh0.github.io/Multicurrency-HD-Wallet/Readme_Images/Restore_Account.png
 )

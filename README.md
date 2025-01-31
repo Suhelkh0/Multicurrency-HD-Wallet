@@ -20,8 +20,8 @@
 - Enter a username and password
 - View and save your 12-word seed phrase
 - Proceed to login
-- [HD-Wallet](https://suhelkh0.github.io/Multicurrency-HD-Wallet/Readme_Images/SignUp.png
-)  
+- https://suhelkh0.github.io/Multicurrency-HD-Wallet/Readme_Images/SignUp.png
+  
 
 2️⃣ **Wallet Overview**
 - See Ethereum/Polygon balances

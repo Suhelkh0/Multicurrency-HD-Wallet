@@ -3,7 +3,7 @@
 
 **HD-Wallet** is a decentralized wallet application that allows users to manage their Ethereum and Polygon assets securely. It supports wallet creation, fund transfers, and account recovery using a seed phrase.
 
-🔗 **Live Demo**: [HD-Wallet](https://suhelkh0.github.io/Multicurrency-HD-Wallet/) 
+🔗 **Live Demo**: [HD-Wallet](https://suhelkh0.github.io/Multicurrency-HD-Wallet/
 )  
 📂 **Repository**: [GitHub Repo](https://github.com/Suhelkh0/HD-Wallet)
 

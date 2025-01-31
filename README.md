@@ -29,18 +29,18 @@
 )  
 
 2️⃣ **Wallet Overview**
-See Ethereum/Polygon balances
-View wallet address
+- See Ethereum/Polygon balances
+- View wallet address
 
 3️⃣ **Transfer Funds**
-Enter recipient address, coin type, and amount
-Click "Send Coins"
-Track transaction using the hash link
+- Enter recipient address, coin type, and amount
+- Click "Send Coins"
+- Track transaction using the hash link
 
 4️⃣ **Transaction History**
-View transactions under the history tab
-Click on a transaction to see details on Sepolia testnet
+- View transactions under the history tab
+- Click on a transaction to see details on Sepolia testnet
 
 5️⃣ **Restore an Account**
-Enter the 12-word seed phrase
-Wallet password is reset automatically
+- Enter the 12-word seed phrase
+- Wallet password is reset automatically

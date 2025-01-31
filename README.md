@@ -46,10 +46,10 @@
 
 4️⃣ **Transaction History**
 - View transactions under the history tab
+- Click on a transaction to see details on Sepolia testnet
 
 ![alt text](https://suhelkh0.github.io/Multicurrency-HD-Wallet/Readme_Images/Transaction_History.png
 )
-- Click on a transaction to see details on Sepolia testnet
 
 5️⃣ **Restore an Account**
 - Enter the 12-word seed phrase

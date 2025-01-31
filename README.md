@@ -15,11 +15,6 @@
 - 🔄 **Fund Transfers**: Send Ethereum/Polygon to other wallets
 - 📜 **Transaction History**: Track previous transactions and view details
 
-## 📸 Screenshots
-![Login Page](docs/login.png)
-![Wallet Balance](docs/balance.png)
-![Transfer Funds](docs/transfer.png)
-
 ## 📜 How It Works
 1️⃣ **Create a Wallet**
 - Enter a username and password

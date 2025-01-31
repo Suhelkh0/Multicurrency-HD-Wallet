@@ -21,7 +21,7 @@
 ![Transfer Funds](docs/transfer.png)
 
 ## 📜 How It Works
-1️⃣ Create a Wallet
+1️⃣ **Create a Wallet**
 Enter a username and password
 View and save your 12-word seed phrase
 Proceed to login

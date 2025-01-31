@@ -19,3 +19,28 @@
 ![Login Page](docs/login.png)
 ![Wallet Balance](docs/balance.png)
 ![Transfer Funds](docs/transfer.png)
+
+📜 How It Works
+1️⃣ Create a Wallet
+Enter a username and password
+View and save your 12-word seed phrase
+Proceed to login
+2️⃣ Wallet Overview
+See Ethereum/Polygon balances
+View wallet address
+3️⃣ Transfer Funds
+Enter recipient address, coin type, and amount
+Click "Send Coins"
+Track transaction using the hash link
+4️⃣ Transaction History
+View transactions under the history tab
+Click on a transaction to see details on Sepolia testnet
+5️⃣ Restore an Account
+Enter the 12-word seed phrase
+Wallet password is reset automatically
+🔧 Technologies Used
+React.js (Frontend)
+Infura API (Real-time balance updates)
+Ethereum & Polygon blockchain
+Web3.js (Transaction handling)
+GitHub Pages (Deployment)
